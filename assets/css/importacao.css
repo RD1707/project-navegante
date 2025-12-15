@@ -1,0 +1,155 @@
+/* assets/css/importacao.css */
+
+/* --- Configurações Gerais da Página --- */
+.page-dark-bg {
+    background-color: #0d2858;
+    color: #FFFFFF;
+    min-height: 100vh;
+    padding-bottom: 80px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* --- Hero Section (Topo com Imagem + Título) --- */
+.service-hero {
+    padding: 60px 0 40px 0;
+}
+
+.hero-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-img-wrapper {
+    flex: 0 0 auto;
+}
+
+.hero-img-wrapper img {
+    max-width: 380px; /* Um pouco maior pois essa imagem tem muitos detalhes */
+    width: 100%;
+    height: auto;
+    /* Efeito de brilho azul suave */
+    filter: drop-shadow(0 0 30px rgba(0, 140, 219, 0.25)); 
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.hero-content h1 {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+/* Botão "Contato" */
+.btn-action {
+    display: inline-block;
+    background-color: #008CDB;
+    color: #FFFFFF;
+    padding: 12px 45px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-action:hover {
+    background-color: #00aaff;
+    transform: translateY(-2px);
+}
+
+/* --- Conteúdo de Texto --- */
+.content-section {
+    padding: 20px 0;
+}
+
+.text-container {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #e6e6e6;
+    text-align: left;
+}
+
+.text-container p {
+    margin-bottom: 20px;
+}
+
+/* --- Estilos da Lista (Exclusivo desta página) --- */
+.text-subtitle {
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.text-container ul {
+    list-style-type: none; /* Remove bolinhas padrão */
+    padding-left: 0;
+    margin-bottom: 40px;
+}
+
+.text-container li {
+    position: relative;
+    padding-left: 25px; /* Espaço para a bolinha personalizada */
+    margin-bottom: 12px;
+}
+
+/* Cria a bolinha azul personalizada */
+.text-container li::before {
+    content: "•";
+    color: #008CDB; /* Azul destaque */
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -6px; /* Ajuste fino da altura da bolinha */
+}
+
+/* Texto de Destaque Final */
+.call-to-action-text {
+    margin-top: 40px;
+    font-weight: 600;
+    color: #fff;
+    border-left: 4px solid #008CDB; /* Linha azul vertical para destaque */
+    padding-left: 20px;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .hero-grid {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-img-wrapper img {
+        max-width: 280px;
+    }
+
+    /* Ajuste da lista no mobile */
+    .text-container ul {
+        padding-left: 10px;
+    }
+}

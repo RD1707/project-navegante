@@ -1,0 +1,114 @@
+/* assets/css/detalhes-servico.css */
+
+/* --- Configurações Gerais da Página --- */
+.page-dark-bg {
+    background-color: #0d2858; /* Azul escuro original */
+    color: #FFFFFF;
+    min-height: 100vh;
+    padding-bottom: 80px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* --- Hero Section (Topo com Imagem + Título) --- */
+.service-hero {
+    padding: 60px 0 40px 0;
+}
+
+.hero-grid {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    gap: 40px; /* Espaço entre a imagem e o título */
+    max-width: 1000px;
+    margin: 0 auto; /* Centraliza o bloco na tela */
+}
+
+.hero-img-wrapper {
+    flex: 0 0 auto; /* Impede a imagem de encolher demais */
+}
+
+.hero-img-wrapper img {
+    max-width: 350px; /* Tamanho controlado para não estourar */
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(0, 140, 219, 0.2)); /* Brilho suave atrás */
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.hero-content h1 {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Botão "Contato" Azul Claro */
+.btn-action {
+    display: inline-block;
+    background-color: #008CDB; /* Azul da imagem */
+    color: #FFFFFF;
+    padding: 12px 40px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-action:hover {
+    background-color: #00aaff;
+    transform: translateY(-2px);
+}
+
+/* --- Conteúdo de Texto --- */
+.content-section {
+    padding: 20px 0;
+}
+
+.text-container {
+    max-width: 900px; /* Largura máxima para leitura confortável */
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8; /* Espaçamento entre linhas para não cansar a vista */
+    color: #e6e6e6;
+    text-align: left; /* Texto alinhado à esquerda é mais legível que justificado na web */
+}
+
+.text-container p {
+    margin-bottom: 25px;
+}
+
+/* Destaque para as frases finais */
+.call-to-action-text {
+    margin-top: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* --- Responsividade (Celular) --- */
+@media (max-width: 768px) {
+    .hero-grid {
+        flex-direction: column; /* Empilha imagem e título */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-img-wrapper img {
+        max-width: 250px; /* Imagem menor no celular */
+    }
+}
