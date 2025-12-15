@@ -20,7 +20,7 @@ O projeto segue uma organização de diretórios para facilitar a manutenção:
 - / (Raiz): Contém todos os arquivos HTML (index.html, servicos.html, historia.html, etc).
 - /assets/css: Contém as folhas de estilo separadas por página.
 - /assets/js: Contém os scripts de interatividade e lógica do formulário.
-- /assets/img: Contém todas as imagens, logotipos e ícones utilizados.
+- /assets/imgs: Contém todas as imagens, logotipos e ícones utilizados.
 
 ## Funcionalidades
 
