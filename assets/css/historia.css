@@ -1,0 +1,193 @@
+/* FUNDO E GERAL */
+.page-dark-bg {
+    background-color: #0d2858;
+    color: #FFFFFF;
+    padding: 40px 0 80px 0;
+    min-height: 100vh;
+}
+
+.page-title {
+    color: #FFFFFF;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* GRID PRINCIPAL (Timeline vs Texto) */
+.history-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start; /* Importante para que a altura seja independente */
+}
+
+/* --- COLUNA DA TIMELINE --- */
+.timeline-column {
+    position: relative;
+    padding: 10px 0; /* Padding reduzido */
+}
+
+/* A linha vertical central */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px; /* Começa um pouco mais baixo para alinhar com o primeiro ícone */
+    bottom: 10px; /* Termina antes do fim do container */
+    width: 2px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 15px; /* Reduzido de 40px para 15px para encolher a linha */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Remove margem do último item para economizar espaço final */
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Ícone central */
+.timeline-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #0d2858;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    z-index: 2;
+    color: #fff;
+    top: 0; /* Garante alinhamento com o topo da caixa */
+}
+
+/* Box branca com o conteúdo */
+.timeline-box {
+    background: #FFFFFF;
+    color: #333;
+    padding: 12px; /* Reduzido levemente */
+    border-radius: 4px;
+    width: 42%;
+    font-size: 0.8rem;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.timeline-box h3 {
+    color: #000;
+    font-size: 0.95rem; /* Ajuste fino na fonte */
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.timeline-box p {
+    line-height: 1.4;
+    margin-bottom: 0; /* Remove margem extra do parágrafo */
+}
+
+/* Posicionamento Esquerda/Direita */
+.timeline-item.left {
+    justify-content: flex-start;
+}
+.timeline-item.left .timeline-box {
+    margin-right: auto;
+}
+
+.timeline-item.right {
+    justify-content: flex-end;
+}
+.timeline-item.right .timeline-box {
+    margin-left: auto;
+}
+
+/* --- COLUNA DE TEXTO DIREITA --- */
+.text-column {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+.text-column p {
+    margin-bottom: 15px; /* Reduzi um pouco para harmonizar com a timeline */
+}
+
+.highlight-text {
+    font-weight: 600;
+    color: #fff;
+    margin-top: 10px;
+    display: block;
+}
+
+/* --- SEPARADOR E MVV --- */
+.separator-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 50px 0; /* Espaço reduzido */
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.mvv-item h2 {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.mvv-item p, .mvv-item li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.mvv-item ul {
+    list-style: none;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+    .history-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-column {
+        padding-left: 20px;
+        margin-bottom: 40px; /* Espaço entre timeline e texto no mobile */
+    }
+    
+    .timeline-line {
+        left: 20px;
+    }
+
+    .timeline-icon {
+        left: 20px;
+    }
+
+    .timeline-item {
+        justify-content: flex-end !important;
+        margin-bottom: 25px; /* No mobile pode ser um pouco maior */
+    }
+
+    .timeline-box {
+        width: 85%;
+        margin-left: 50px !important;
+    }
+    
+    .mvv-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

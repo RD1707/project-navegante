@@ -1,0 +1,137 @@
+.page-dark-bg {
+    background-color: #0d2858;
+    padding-bottom: 80px;
+    min-height: 80vh;
+}
+
+.page-title-section {
+    padding: 60px 0 40px 0;
+    color: #FFFFFF;
+}
+
+.page-title-section h1 {
+    color: #FFFFFF;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.page-title-section p {
+    font-size: 1rem;
+    max-width: 800px;
+    opacity: 0.9;
+}
+
+.services-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.service-card {
+    background: #FFFFFF;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 0 0 40px 0;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image-area {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.service-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 300px; 
+}
+
+.card-content {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    color: #333333;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.card-divider {
+    width: 50px;
+    height: 2px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.card-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-outline-blue {
+    border: 1px solid #008CDB;
+    color: #008CDB;
+    background: transparent;
+    padding: 10px 25px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-outline-blue:hover {
+    background: #008CDB;
+    color: #FFFFFF;
+}
+
+.active-link {
+    color: #008CDB !important;
+    border-bottom: 2px solid #008CDB;
+    padding-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .services-grid-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .card-actions {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn-outline-blue {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .page-title-section {
+        text-align: center;
+    }
+}

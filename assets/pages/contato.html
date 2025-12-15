@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco - Grupo Navegante</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contato.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../../index.html">
+                    <img src="../imgs/logo.png" alt="Grupo Navegante" style="max-width: 10vw; min-width: 120px;">
+                </a>
+            </div>
+
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="historia.html">NOSSA HISTÓRIA</a></li>
+                    <li><a href="servicos.html">NOSSOS SERVIÇOS</a></li>
+                    <li><a href="https://www.lojanavegante.com.br">NOSSA LOJA VIRTUAL</a></li>
+                    <li><a href="marcas.html">NOSSAS MARCAS</a></li>
+                    <li><a href="contato.html" class="active-link">FALE CONOSCO</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-dark-bg">
+        
+        <section class="contact-header-section">
+            <div class="container">
+                <h1>Fale conosco</h1>
+                <p>Fique à vontade para entrar em contato!<br>Responderemos o mais breve.</p>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+    <div class="container">
+        <form id="contact-form" class="form-wrapper" action="https://formsubmit.co/seuemail@gmail.com" method="POST">
+            
+            <input type="hidden" name="_captcha" value="false"> <input type="hidden" name="_template" value="table"> <input type="hidden" name="_subject" value="Novo contato do site Grupo Navegante"> <input type="text" name="name" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="text" name="_subject_visual" placeholder="Assunto (ex: Orçamento)" required> <textarea name="message" placeholder="Mensagem" rows="5" required></textarea>
+            
+            <button type="submit" id="btn-submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="../imgs/logo.png" alt="Grupo Navegante Logo Footer" style="transform: scale(0.8);">
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <nav class="footer-nav">
+                <a href="historia.html">Nossa história</a>
+                <a href="servicos.html">Nossos serviços</a>
+                <a href="https://www.lojanavegante.com.br">Nossa Loja Virtual</a>
+                <a href="marcas.html">Nossas Marcas</a>
+                <a href="contato.html">Fale conosco</a>
+            </nav>
+            <div class="copyright">
+                <p>Grupo Navegante Ltda. | CNPJ: 39.558.343/0001-01 – Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    
+    <script src="../js/contato.js"></script>
+</body>
+</html>

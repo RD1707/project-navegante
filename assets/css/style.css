@@ -1,0 +1,554 @@
+:root {
+    --primary-blue: #005e94;
+    --dark-blue: #1C355E;
+    --light-blue: #2f6992;
+    --text-dark: #333333;
+    --text-gray: #666666;
+    --bg-light: #F8F9FA;
+    --white: #FFFFFF;
+    /* Gradiente ajustado para ficar mais fiel ao fundo da imagem que você mandou */
+    --gradient-hero: linear-gradient(135deg, #008CDB 0%, #0056b3 100%);
+    --radius: 8px;
+    --container-width: 1140px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Regra geral para imagens serem responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-blue);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-outline {
+    border-color: var(--white);
+    color: var(--white);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--primary-blue);
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-blue);
+}
+
+.main-header {
+    background: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desktop-nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+.desktop-nav a {
+    color: #888;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.desktop-nav a:hover {
+    color: var(--primary-blue);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* HERO SECTION - CONFIGURAÇÃO DA ONDA */
+.hero-section {
+    background: var(--gradient-hero);
+    /* Aumentei o padding inferior para dar espaço à imagem e à onda */
+    padding: 60px 0 100px 0; 
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-image-wrapper {
+    width: 45%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Classe específica para a imagem do hero */
+.hero-main-img {
+    max-height: 400px;
+    /* Filtro para garantir que a imagem png se misture bem se tiver bordas brancas ruins, 
+       mas como é PNG transparente, deve ficar ótimo */
+}
+
+/* A ONDA AZUL/BRANCA */
+.hero-curve {
+    position: absolute;
+    bottom: -1px; /* -1px para evitar linha branca fina no render */
+    left: 0;
+    width: 100%;
+    height: 120px; /* Altura da onda */
+    background: var(--white);
+    /* Essa borda cria o efeito de onda suave subindo para a direita */
+    border-top-right-radius: 100% 100%;
+    z-index: 1;
+}
+
+.info-section {
+    padding: 80px 0;
+}
+
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.text-col h2 {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.text-col h3 {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.text-col p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.metrics-section {
+    background-color: #E8EFF5;
+    padding: 60px 0;
+    position: relative;
+    margin-top: 50px;
+}
+
+/* Onda invertida no topo das métricas */
+.metrics-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #E8EFF5;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    z-index: -1;
+}
+
+.metrics-grid {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.metric-number {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    line-height: 1;
+}
+
+.metric-desc {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.2;
+}
+
+.cta-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.cta-headline {
+    font-size: 1.5rem;
+    color: #777;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.btn-google {
+    background-color: #0077B5;
+    border-radius: 4px;
+}
+
+.main-footer {
+    background-color: #EEEEEE;
+    padding: 60px 0 30px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-links a {
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #555;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.copyright {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.copyright p {
+    font-size: 0.7rem;
+    color: #999;
+}
+
+.small-credits {
+    margin-top: 5px;
+    font-size: 0.6rem;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 15px;
+    }
+    
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 50px; /* Espaço extra no mobile */
+    }
+
+    .hero-content, .hero-image-wrapper {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-image-wrapper {
+        margin-top: 30px;
+    }
+
+    .grid-2-col {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .reverse-mobile {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .metrics-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .cta-headline {
+        margin: 0 auto 30px auto;
+        text-align: center;
+    }
+    
+    .align-center {
+        text-align: center;
+    }
+    
+    .logo img {
+        max-width: 140px !important; /* Ajuste para logo no mobile */
+    }
+}
+
+/* --- ADICIONE AO FINAL DO SEU STYLE.CSS --- */
+
+/* Classes para animação de Scroll (Reveal) */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header Sticky com sombra */
+.header-scrolled {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 10px 0; /* Fica um pouco mais compacto */
+    transition: all 0.3s ease;
+}
+
+/* Efeito suave no Menu Mobile */
+.desktop-nav {
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- ESTILOS DA PÁGINA DE SERVIÇOS --- */
+
+/* Wrapper Azul Escuro */
+.page-dark-bg {
+    background-color: #0d2858; /* Azul escuro do fundo */
+    padding-bottom: 80px;
+    min-height: 80vh;
+}
+
+/* Seção de Título */
+.page-title-section {
+    padding: 60px 0 40px 0;
+    color: var(--white);
+}
+
+.page-title-section h1 {
+    color: var(--white); /* Sobrescreve a cor padrão */
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.page-title-section p {
+    font-size: 1rem;
+    max-width: 800px;
+    opacity: 0.9;
+}
+
+/* Grid de Cards */
+.services-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* O Card Branco */
+.service-card {
+    background: var(--white);
+    border-radius: 30px; /* Bordas bem arredondadas conforme a imagem */
+    overflow: hidden;
+    padding: 0 0 40px 0;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagem dentro do Card */
+.card-image-area {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.service-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Se a imagem for quadrada, isso ajuda a manter proporção */
+    max-height: 300px; 
+}
+
+/* Conteúdo do Card */
+.card-content {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+/* Linha divisória pequena */
+.card-divider {
+    width: 50px;
+    height: 2px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.card-actions {
+    margin-top: auto; /* Empurra os botões para baixo */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Botões específicos desta página (Azul Outline) */
+.btn-outline-blue {
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+    background: transparent;
+    padding: 10px 25px; /* Botões um pouco menores que o da Hero */
+    font-size: 0.8rem;
+    border-radius: 4px; /* Na imagem os botões são quadrados/levemente arredondados */
+    font-weight: 700;
+}
+
+.btn-outline-blue:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+/* Link Ativo do Menu */
+.active-link {
+    color: var(--primary-blue) !important;
+    border-bottom: 2px solid var(--primary-blue);
+    padding-bottom: 5px;
+}
+
+/* Responsividade para Serviços */
+@media (max-width: 768px) {
+    .services-grid-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .card-actions {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn-outline-blue {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .page-title-section {
+        text-align: center;
+    }
+}
