@@ -17,7 +17,6 @@
     box-sizing: border-box;
 }
 
-/* Previne rolagem horizontal indesejada em todo o site */
 html, body {
     overflow-x: hidden;
     width: 100%;
@@ -29,7 +28,6 @@ body {
     line-height: 1.6;
 }
 
-/* Imagens responsivas por padrão */
 img {
     max-width: 100%;
     height: auto;
@@ -58,7 +56,6 @@ a {
     padding: 0 20px;
 }
 
-/* --- BOTÕES --- */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -92,7 +89,6 @@ a {
     background-color: var(--dark-blue);
 }
 
-/* --- HEADER --- */
 .main-header {
     background: var(--white);
     padding: 15px 0;
@@ -124,7 +120,7 @@ a {
 }
 
 .menu-btn {
-    display: none; /* Escondido no Desktop */
+    display: none; 
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -132,13 +128,11 @@ a {
     cursor: pointer;
 }
 
-/* --- HERO SECTION --- */
 .hero-section {
     background: var(--gradient-hero);
-    padding: 80px 0 120px 0; /* Padding padrão Desktop */
+    padding: 80px 0 120px 0; 
     position: relative;
     overflow: hidden;
-    /* Centraliza conteúdo verticalmente no Desktop */
     display: flex;
     align-items: center;
     min-height: 600px; 
@@ -176,7 +170,6 @@ a {
     transition: transform 0.3s;
 }
 
-/* A ONDA AZUL/BRANCA */
 .hero-curve {
     position: absolute;
     bottom: -1px;
@@ -188,7 +181,6 @@ a {
     z-index: 1;
 }
 
-/* --- INFO SECTION --- */
 .info-section {
     padding: 80px 0;
 }
@@ -212,7 +204,6 @@ a {
     font-size: 0.95rem;
 }
 
-/* --- METRICS SECTION --- */
 .metrics-section {
     background-color: #E8EFF5;
     padding: 60px 0;
@@ -254,7 +245,6 @@ a {
     line-height: 1.2;
 }
 
-/* --- CTA SECTION --- */
 .cta-section {
     padding: 80px 0;
     background: var(--white);
@@ -272,7 +262,6 @@ a {
     border-radius: 4px;
 }
 
-/* --- FOOTER --- */
 .main-footer {
     background-color: #EEEEEE;
     padding: 60px 0 30px 0;
@@ -317,7 +306,6 @@ a {
     color: #999;
 }
 
-/* --- ANIMAÇÕES --- */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -335,17 +323,12 @@ a {
     transition: all 0.3s ease;
 }
 
-/* --- MENU STORIES (Mobile Padrão Escondido) --- */
 .mobile-stories-container {
     display: none; 
 }
 
-/* ==========================================================
-   RESPONSIVIDADE (MOBILE - até 768px)
-   ========================================================== */
 @media (max-width: 768px) {
     
-    /* 1. Header & Stories */
     .header-container {
         padding: 0 15px;
     }
@@ -353,22 +336,20 @@ a {
     .menu-btn { display: block; }
     
     .logo img {
-        max-width: 130px !important; /* Tamanho controlado do logo */
+        max-width: 130px !important; 
     }
 
-    /* STORIES: Ajuste de Centralização e Espaço */
     .mobile-stories-container {
         display: flex;
         gap: 2vw; 
         
-        /* PADDING LATERAL IMPORTANTE: 5vw de cada lado para não colar na borda */
         padding: 15px 5vw; 
         
         background: #ffffff;
         overflow-x: auto;
         white-space: nowrap;
         border-bottom: 1px solid #f0f0f0;
-        justify-content: flex-start; /* Mantém rolável */
+        justify-content: flex-start; 
         scrollbar-width: none; 
         -ms-overflow-style: none;
     }
@@ -379,7 +360,7 @@ a {
         flex-direction: column;
         align-items: center;
         text-decoration: none;
-        width: 21vw; /* Largura proporcional */
+        width: 21vw; 
         flex-shrink: 0;
     }
 
@@ -420,15 +401,12 @@ a {
         font-weight: 600;
         line-height: 1.3;
         margin-top: 2px;
-        white-space: normal; /* Permite a quebra de linha do <br> */
+        white-space: normal; 
     }
 
-    /* 2. HERO SECTION MOBILE (Maior e Invertida) */
     .hero-section {
-        /* Altura mínima imponente no celular */
         min-height: 85vh; 
         
-        /* Padding generoso para centralizar bem */
         padding-top: 60px; 
         padding-bottom: 120px; 
         
@@ -437,10 +415,9 @@ a {
     }
 
     .hero-container {
-        /* INVERSÃO: Imagem em cima, Texto embaixo */
         flex-direction: column-reverse; 
         text-align: center;
-        gap: 40px; /* Mais espaço entre imagem e texto */
+        gap: 40px; 
     }
 
     .hero-content {
@@ -450,28 +427,27 @@ a {
     }
 
     .hero-content h1 {
-        font-size: 2rem; /* Fonte grande e legível */
+        font-size: 2rem; 
         margin-bottom: 25px;
         line-height: 1.3;
     }
     
     .hero-image-wrapper {
         width: 100%;
-        max-width: 85%; /* IMAGEM MAIOR: Ocupa 85% da tela agora */
+        max-width: 85%; 
         margin: 0 auto;
     }
 
     .hero-main-img {
-        transform: scale(1.5) !important; /* Reseta zoom desktop */
+        transform: scale(1.5) !important;
         width: 100%;
         height: auto;
     }
 
-    /* 3. REFATORAÇÃO GERAL (Centralização Mobile) */
     .grid-2-col {
         grid-template-columns: 1fr;
         gap: 50px;
-        text-align: center; /* Centraliza tudo */
+        text-align: center;
     }
 
     .reverse-mobile {

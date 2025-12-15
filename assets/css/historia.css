@@ -1,24 +1,19 @@
-/* assets/css/historia.css */
-
-/* FUNDO E GERAL */
 .page-dark-bg {
     background-color: #0d2858;
     color: #FFFFFF;
-    padding: 60px 0 80px 0; /* Ajustei o padding top para 60px para igualar as outras páginas */
+    padding: 60px 0 80px 0; 
     min-height: 100vh;
 }
 
-/* TÍTULO PADRONIZADO */
 .page-title {
     color: #FFFFFF;
-    font-size: 2.2rem; /* Tamanho igualado ao de Marcas/Contato */
-    margin-bottom: 40px; /* Espaço para a timeline começar */
+    font-size: 2.2rem; 
+    margin-bottom: 40px; 
     font-weight: 700;
-    text-align: left; /* Garante alinhamento à esquerda */
+    text-align: left; 
     line-height: 1.2;
 }
 
-/* GRID PRINCIPAL (Timeline vs Texto) */
 .history-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -26,13 +21,11 @@
     align-items: start;
 }
 
-/* --- COLUNA DA TIMELINE --- */
 .timeline-column {
     position: relative;
     padding: 10px 0;
 }
 
-/* A linha vertical central */
 .timeline-line {
     position: absolute;
     left: 50%;
@@ -55,7 +48,6 @@
     margin-bottom: 0;
 }
 
-/* Ícone central */
 .timeline-icon {
     position: absolute;
     left: 50%;
@@ -74,7 +66,6 @@
     top: 0;
 }
 
-/* Box branca com o conteúdo */
 .timeline-box {
     background: #FFFFFF;
     color: #333;
@@ -98,7 +89,6 @@
     margin-bottom: 0;
 }
 
-/* Posicionamento Esquerda/Direita */
 .timeline-item.left {
     justify-content: flex-start;
 }
@@ -113,7 +103,6 @@
     margin-left: auto;
 }
 
-/* --- COLUNA DE TEXTO DIREITA --- */
 .text-column {
     font-size: 0.95rem;
     line-height: 1.8;
@@ -131,7 +120,6 @@
     display: block;
 }
 
-/* --- SEPARADOR E MVV --- */
 .separator-line {
     width: 100%;
     height: 1px;
@@ -161,7 +149,6 @@
     list-style: none;
 }
 
-/* RESPONSIVIDADE */
 @media (max-width: 900px) {
     .history-layout {
         grid-template-columns: 1fr;

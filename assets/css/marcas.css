@@ -1,4 +1,3 @@
-/* Fundo Azul Escuro (Reutilizando a identidade visual) */
 .page-dark-bg {
     background-color: #0d2858;
     color: #FFFFFF;
@@ -6,7 +5,6 @@
     min-height: 80vh;
 }
 
-/* Títulos */
 .page-title-section {
     padding: 60px 0 40px 0;
     color: #FFFFFF;
@@ -20,12 +18,11 @@
 
 .page-title-section p {
     font-size: 1rem;
-    max-width: 700px; /* Largura controlada para o texto não esticar demais */
+    max-width: 700px; 
     opacity: 0.9;
     line-height: 1.5;
 }
 
-/* Grid das Marcas */
 .brands-grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -33,10 +30,9 @@
     margin-top: 20px;
 }
 
-/* Card Branco */
 .brand-card {
     background: #FFFFFF;
-    border-radius: 20px; /* Bordas arredondadas */
+    border-radius: 20px; 
     overflow: hidden;
     padding: 40px 20px;
     text-align: center;
@@ -44,13 +40,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 450px; /* Garante altura uniforme */
+    min-height: 450px; 
 }
 
-/* Área do Logo */
 .brand-logo-area {
     width: 100%;
-    height: 150px; /* Altura fixa para alinhar os logos */
+    height: 150px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,7 +72,7 @@
     color: #333;
     margin-bottom: 40px;
     font-weight: 700;
-    max-width: 300px; /* Limita largura para quebrar a linha igual à imagem */
+    max-width: 300px; 
 }
 
 .brand-actions {
@@ -88,13 +83,12 @@
     width: 100%;
 }
 
-/* Estilo dos Botões */
 .btn-outline-blue {
     border: 1px solid #008CDB;
     color: #008CDB;
     background: transparent;
     padding: 10px 20px;
-    font-size: 0.75rem; /* Fonte um pouco menor para caber */
+    font-size: 0.75rem; 
     border-radius: 4px;
     font-weight: 700;
     text-transform: uppercase;
@@ -104,10 +98,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 140px; /* Garante que os botões tenham tamanho similar */
+    min-width: 140px; 
 }
 
-/* Botão de uma linha só (Ver Página) precisa centralizar texto verticalmente */
 .btn-outline-blue.single-line {
     padding: 0 20px; 
 }
@@ -117,14 +110,12 @@
     color: #FFFFFF;
 }
 
-/* Link Ativo no Header */
 .active-link {
     color: #008CDB !important;
     border-bottom: 2px solid #008CDB;
     padding-bottom: 5px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .brands-grid-wrapper {
         grid-template-columns: 1fr;

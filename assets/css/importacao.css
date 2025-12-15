@@ -1,6 +1,3 @@
-/* assets/css/importacao.css */
-
-/* --- Configurações Gerais da Página --- */
 .page-dark-bg {
     background-color: #0d2858;
     color: #FFFFFF;
@@ -9,7 +6,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-/* --- Hero Section (Topo com Imagem + Título) --- */
 .service-hero {
     padding: 60px 0 40px 0;
 }
@@ -28,10 +24,9 @@
 }
 
 .hero-img-wrapper img {
-    max-width: 380px; /* Um pouco maior pois essa imagem tem muitos detalhes */
+    max-width: 380px; 
     width: 100%;
     height: auto;
-    /* Efeito de brilho azul suave */
     filter: drop-shadow(0 0 30px rgba(0, 140, 219, 0.25)); 
 }
 
@@ -48,7 +43,6 @@
     margin-bottom: 25px;
 }
 
-/* Botão "Contato" */
 .btn-action {
     display: inline-block;
     background-color: #008CDB;
@@ -68,7 +62,6 @@
     transform: translateY(-2px);
 }
 
-/* --- Conteúdo de Texto --- */
 .content-section {
     padding: 20px 0;
 }
@@ -86,7 +79,6 @@
     margin-bottom: 20px;
 }
 
-/* --- Estilos da Lista (Exclusivo desta página) --- */
 .text-subtitle {
     font-size: 1.3rem;
     color: #FFFFFF;
@@ -97,38 +89,35 @@
 }
 
 .text-container ul {
-    list-style-type: none; /* Remove bolinhas padrão */
+    list-style-type: none;
     padding-left: 0;
     margin-bottom: 40px;
 }
 
 .text-container li {
     position: relative;
-    padding-left: 25px; /* Espaço para a bolinha personalizada */
+    padding-left: 25px; 
     margin-bottom: 12px;
 }
 
-/* Cria a bolinha azul personalizada */
 .text-container li::before {
     content: "•";
-    color: #008CDB; /* Azul destaque */
+    color: #008CDB; 
     font-weight: bold;
     font-size: 1.5rem;
     position: absolute;
     left: 0;
-    top: -6px; /* Ajuste fino da altura da bolinha */
+    top: -6px; 
 }
 
-/* Texto de Destaque Final */
 .call-to-action-text {
     margin-top: 40px;
     font-weight: 600;
     color: #fff;
-    border-left: 4px solid #008CDB; /* Linha azul vertical para destaque */
+    border-left: 4px solid #008CDB; 
     padding-left: 20px;
 }
 
-/* --- Responsividade --- */
 @media (max-width: 768px) {
     .hero-grid {
         flex-direction: column;
@@ -148,7 +137,6 @@
         max-width: 280px;
     }
 
-    /* Ajuste da lista no mobile */
     .text-container ul {
         padding-left: 10px;
     }

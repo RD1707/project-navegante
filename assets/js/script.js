@@ -1,23 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // --- 1. MENU MOBILE ---
     const menuBtn = document.querySelector('.menu-btn');
     const nav = document.querySelector('.desktop-nav');
     const navLinks = document.querySelectorAll('.desktop-nav a');
 
-    // Alternar menu
     menuBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         toggleMenu();
     });
 
-    // Fechar ao clicar em um link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 768) closeMenu();
         });
     });
 
-    // Fechar ao clicar fora
     document.addEventListener('click', (e) => {
         if (window.innerWidth <= 768 && 
             nav.style.display === 'flex' && 
@@ -27,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Resetar menu ao redimensionar a tela
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) {
             nav.removeAttribute('style');
@@ -70,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // --- 2. HEADER STICKY (SOMBRA AO ROLAR) ---
     const header = document.querySelector('.main-header');
     
     window.addEventListener('scroll', () => {
@@ -82,29 +76,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // --- 3. SCROLL REVEAL (ANIMAÇÃO AO APARECER) ---
     const revealElements = document.querySelectorAll('.hero-content, .hero-image-wrapper, .section-suppliers .image-col, .section-suppliers .text-col, .section-import .text-col, .section-import .image-col, .metrics-grid, .cta-text, .cta-image');
 
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                revealObserver.unobserve(entry.target); // Anima apenas uma vez
+                revealObserver.unobserve(entry.target);
             }
         });
     }, {
         root: null,
-        threshold: 0.15, // Dispara quando 15% do elemento estiver visível
+        threshold: 0.15, 
         rootMargin: "0px"
     });
 
     revealElements.forEach(el => {
-        el.classList.add('reveal'); // Adiciona classe base CSS
+        el.classList.add('reveal'); 
         revealObserver.observe(el);
     });
 
 
-    // --- 4. CONTADOR DE MÉTRICAS ANIMADO ---
     const metricsSection = document.querySelector('.metrics-section');
     const metricNumbers = document.querySelectorAll('.metric-number');
     let started = false;
@@ -124,15 +116,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function startCount(el) {
         const originalText = el.innerText;
-        // Extrai apenas os números (ex: "+8k" vira 8)
         const target = parseInt(originalText.replace(/\D/g, '')); 
-        // Identifica prefixo (+) e sufixo (k)
         const prefix = originalText.includes('+') ? '+' : '';
         const suffix = originalText.toLowerCase().includes('k') ? 'k' : '';
         
         let current = 0;
-        const duration = 2000; // 2 segundos
-        const increment = Math.ceil(target / (duration / 20)); // Define velocidade
+        const duration = 2000;
+        const increment = Math.ceil(target / (duration / 20)); 
 
         const timer = setInterval(() => {
             current += increment;

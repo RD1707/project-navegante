@@ -1,37 +1,33 @@
-/* assets/css/detalhes-servico.css */
-
-/* --- Configurações Gerais da Página --- */
 .page-dark-bg {
-    background-color: #0d2858; /* Azul escuro original */
+    background-color: #0d2858;
     color: #FFFFFF;
     min-height: 100vh;
     padding-bottom: 80px;
     font-family: 'Open Sans', sans-serif;
 }
 
-/* --- Hero Section (Topo com Imagem + Título) --- */
 .service-hero {
     padding: 60px 0 40px 0;
 }
 
 .hero-grid {
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
+    align-items: center; 
     justify-content: center;
-    gap: 40px; /* Espaço entre a imagem e o título */
+    gap: 40px; 
     max-width: 1000px;
-    margin: 0 auto; /* Centraliza o bloco na tela */
+    margin: 0 auto; 
 }
 
 .hero-img-wrapper {
-    flex: 0 0 auto; /* Impede a imagem de encolher demais */
+    flex: 0 0 auto;
 }
 
 .hero-img-wrapper img {
-    max-width: 350px; /* Tamanho controlado para não estourar */
+    max-width: 350px; 
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 30px rgba(0, 140, 219, 0.2)); /* Brilho suave atrás */
+    filter: drop-shadow(0 0 30px rgba(0, 140, 219, 0.2)); 
 }
 
 .hero-content {
@@ -47,10 +43,9 @@
     margin-bottom: 20px;
 }
 
-/* Botão "Contato" Azul Claro */
 .btn-action {
     display: inline-block;
-    background-color: #008CDB; /* Azul da imagem */
+    background-color: #008CDB; 
     color: #FFFFFF;
     padding: 12px 40px;
     border-radius: 4px;
@@ -67,35 +62,32 @@
     transform: translateY(-2px);
 }
 
-/* --- Conteúdo de Texto --- */
 .content-section {
     padding: 20px 0;
 }
 
 .text-container {
-    max-width: 900px; /* Largura máxima para leitura confortável */
+    max-width: 900px; 
     margin: 0 auto;
     font-size: 1.05rem;
-    line-height: 1.8; /* Espaçamento entre linhas para não cansar a vista */
+    line-height: 1.8; 
     color: #e6e6e6;
-    text-align: left; /* Texto alinhado à esquerda é mais legível que justificado na web */
+    text-align: left; 
 }
 
 .text-container p {
     margin-bottom: 25px;
 }
 
-/* Destaque para as frases finais */
 .call-to-action-text {
     margin-top: 40px;
     font-weight: 600;
     color: #fff;
 }
 
-/* --- Responsividade (Celular) --- */
 @media (max-width: 768px) {
     .hero-grid {
-        flex-direction: column; /* Empilha imagem e título */
+        flex-direction: column; 
         text-align: center;
         gap: 20px;
     }
@@ -109,6 +101,6 @@
     }
 
     .hero-img-wrapper img {
-        max-width: 250px; /* Imagem menor no celular */
+        max-width: 250px; 
     }
 }
